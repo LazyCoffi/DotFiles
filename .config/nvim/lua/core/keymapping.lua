@@ -20,9 +20,7 @@ vim.keymap.set('n', '<A-k>', ':BufferLineCycleNext<CR>')
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 
--- rust
-
--- rust cargo run
-vim.keymap.set('n', '<leader>rr', ':!cargo run<CR>')
--- rust cargo build
-vim.keymap.set('n', '<leader>rb', ':!cargo build<CR>')
+-- rust cargo run under main.rs
+vim.keymap.set('n', '<leader>rr', ':!cargo run --manifest-path %:p\\..\\..\\Cargo.toml<CR>')
+-- rust cargo build under main.rs
+vim.keymap.set('n', '<leader>rb', ':!cargo build --manifest-path %:p\\..\\..\\Cargo.toml<CR>')
