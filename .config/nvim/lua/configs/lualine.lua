@@ -1,7 +1,7 @@
 local M = {}  
 
 function M.config()  
-	require('lualine').setup()  
+    require('lualine').setup()  
 end  
-
+  
 return M

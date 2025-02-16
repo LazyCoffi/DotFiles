@@ -8,11 +8,12 @@ return require('packer').startup(function()
 
     -- theme
     use 'sainnhe/sonokai'
+    use 'folke/tokyonight.nvim'
 
     -- file tree
     use {
         'nvim-tree/nvim-tree.lua',
-        require = { 'nvim-tree/nvim-web-devicons', opt = true},
+        require = { 'nvim-tree/nvim-web-devicons' },
     }
 
     -- language support
@@ -36,9 +37,23 @@ return require('packer').startup(function()
         requires = 'nvim-lua/plenary.nvim'
     }
 
-    -- mainmenu
+    -- tabs
+    use 'akinsho/bufferline.nvim'
+
+    -- noice
     use {
-        'goolord/alpha-nvim',
-        requires = 'kyazdani42/nvim-web-devicons'
+        'folke/noice.nvim',
+        requires = {'MunifTanjim/nui.nvim',
+        "rcarriga/nvim-notify"}
     }
+
+    -- git
+    use 'lewis6991/gitsigns.nvim'
+
+    -- todo
+    use {
+        'folke/todo-comments.nvim',
+        requires = 'nvim-lua/plenary.nvim'
+    }
+
 end)
